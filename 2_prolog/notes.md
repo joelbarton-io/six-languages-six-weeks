@@ -69,10 +69,63 @@
 - Prolog works through 'rules' (syntax that involve `:-` (if)) in order (based on position in knowledge base)
 ### Day 2 (pg 109)
 ### Recursion
-### Lists and Tuples
+- since Prolog is declarative, an iterative approach isn't feasible so instead we're using declarative recursion
+- ####### "clause" is that anything separated by a `,`/ `:-` ? or something different entirely?
+  - does the term 'clause' apply to just rules or facts as well?
+
+- think of `.` between clauses as logical OR
+- think of `,` between sub-goals as logical AND
+
+- ####### if we were to define the same-named rule predicate in a different order, does that change how our code works?
+- if the recursive subgoal (e.g. `ancestor(Z, Y).` from the second clause), Prolog optimizes the call, thus keeping the memory use constant or `O(1)`
+
+### Lists and Tuples (pg 111)
+- lists: variable length containers
+- tuples: fixed length containers
+
+- ^THESE ARE THE TWO CORE DATASTRUCTURES IN PROLOG
+
 ### Unification part 2
-### Lists and Math
+- two tuples *UNIFY* if all elements unify, this applies when using variables (upper cased strings, first letter)
+```pl
+| ?- (A, 2, C) = (1, B, 3).
+
+    A=1
+    B=2
+    C=3
+
+yes
+```
+- it doesn't matter which side the variable(s) are on, so long as unification is possible they will unify
+- somethings lists can do that tuples can't:
+``` pl
+| ?- [a, b, c] = [Head|Tail].
+
+Head = a
+Tail = [b,c]
+
+yes
+```
+- also works with a single element list, however if the list is empty `[]`, this deconstruction pattern doesn't work
+- the `_` underscore is the *WILDCARD* and unifies with everything (including Variables)
+- ####### is unification sort of similar to *resolving* things (cancelling out values on either side of `=`)???
+
+### Lists and Math (pg 114)
+- ####### shouldn't the `count(0, [])` be `count([], 0)` ?  this is probably trivial, but a bit deceptive
+- "logical rule recursion" ;
+
+- there seems to be a typo on page 115 where he says: 'We move on to satisfying the goals for the second rule, `count(Count, [Head|Tail])`.
+
 ### Using Rules in Both Directions
+- `append` can give you a variety of tools
+  1. lie detector `append([oil], [water], [oil, water]).`
+  2. list builder `append([tiny], [bubbles], What).`
+  3. list subtraction `append([dessert_topping], Who, [dessert_topping, floor_wax]).`
+  4. computes permutations `append(One, Two, [apples, oranges, bananas]).`
+
+- ####### A main reason why this the recursion is hard to understand is that we're nesting rules
+  - so each time we try to prove a subgoal, the variables are different
+
 ### WWL Day 2
 
 ### Day 3 (pg 120)
