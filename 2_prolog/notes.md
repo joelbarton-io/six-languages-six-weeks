@@ -137,3 +137,7 @@ yes
 ### Strengths
 ### Weaknesses
 ### Final Thoughts
+
+
+- UNIFICATION: "Two atomic formulas unify if there exists an assignment to the variables in them under which the two formulas become identical."
+- variables pretty much disappear as soon as the query ends, there are no share or retained values for similarly named variables in different queries/goals

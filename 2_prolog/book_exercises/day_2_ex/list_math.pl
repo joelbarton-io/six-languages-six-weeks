@@ -95,3 +95,7 @@ UNIFICATION WITH rule: sum(Total, [H|T]), thus binding:
 
 /*
 average(Average, List) :- sum(Sum, List), count(Count, List), Average is Sum/Count. */
+
+
+
+
