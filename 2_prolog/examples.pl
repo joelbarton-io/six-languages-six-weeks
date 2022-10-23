@@ -16,16 +16,3 @@ last(X, []). % base case.
 last(List, Tail) :- last([H|Tail], Tail). % sole sub-goal is the recursive case
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-owns(joel, pets(rocket, luka)).

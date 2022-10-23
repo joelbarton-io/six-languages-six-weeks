@@ -3,7 +3,7 @@
 ## general (pg 95)
 - "it's about knowing how to ask the right question"
 - extremely capable in some respects, very limited in others
-- previous languages: (Ruby & Io) were imperative, Prolog is declarative
+- previous languages: (Ruby & Io) were imperative, Prolog is functional and declarative
 - user inputs some facts and inferences; Prolog does the reasoning for you
   - it's like describing the qualities you like in bread to a master baker and they do the rest (implementation) (don't have to know *how*)
 - one of the first successful logic programming languages
@@ -20,7 +20,7 @@
     3. Query (**'Does Rocket like tummy rubs?'**)
 
   - FACTS and RULES are contained in the *knowledge base*
-  - we QUERY the compiled *knowledge base* to retrieve information
+  - we QUERY the compiled *knowledge base* from the console
 
 ## Day 1 (pg 97)
 
@@ -134,8 +134,13 @@ yes
 ### WWL Day 3
 
 ### Wrapping up Prolog
+- 1. building a knowledge base
+- 2. compile and query (assertions(-> yes/no) or with variables)
+- unification or the balancing of variables on two sides of a system
 ### Strengths
+- Natural language processing, constrained resource situations,
 ### Weaknesses
+- not general purpose, large data sets, requires deep understanding of rules to design efficient systems, computationally expensive otherwise
 ### Final Thoughts
 
 

@@ -1,10 +1,9 @@
-count([], 0). % fact, (boundary)
+count(0, []). % fact, (boundary condition)
 
-count([H|Tail], Length) :-
-  count(Tail, TailLength), % subgoal, (recursive call)
+count(Length, [H|Tail]) :-
+  count(TailLength, Tail), % subgoal, (recursive call)
   Length is TailLength + 1. % exit (unwind)
 
-  % format('TailLength: ~w \nTail: ~w \n\n', [TailLength, Tail]),
 
 
 
@@ -14,6 +13,14 @@ count([H|Tail], Length) :-
 
 
 
+
+
+
+
+
+
+
+% format('TailLength: ~w \nTail: ~w \n\n', [TailLength, Tail]),
 
 
 
