@@ -1,7 +1,9 @@
-function length(n, list) {
-  if (list.length === 0) return n;
+function count(leng, list) {
+  console.log(leng, list);
 
-  return length(n + 1, list.slice(1));
+  if (list.length === 0) return leng;
+
+  return count(leng + 1, list.slice(1));
 }
 
-length(0, [1, 2, 3]);
+count(0, [1, 2, 3]);

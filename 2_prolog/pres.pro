@@ -9,3 +9,7 @@ understands(class, Task, Num) :-
 
 print_a_message(Message) :-
   print(Message).
+
+
+predicate(arg_1, arg_2). % < clause
+%           ^atoms^
