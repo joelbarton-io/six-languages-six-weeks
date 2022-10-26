@@ -1,8 +1,8 @@
-count(0, []). % fact, (base case; boundary condition)
+count(0, []). % base case
 
 count(Length, [H|Tail]) :-
-  count(TailLength, Tail), % subgoal, (recursive call)
-  Length is TailLength + 1. % exit (unwind)
+  count(TailLength, Tail), % recursive case
+  Length is TailLength + 1.
 
 
 
@@ -12,7 +12,7 @@ count(Length, [H|Tail]) :-
 
 
 
-/* predicate Variable, 
+/*
 | ?- count(Length, [1, 2, 3]).
 line#   call#  operation    expression
 --|-------|--------|---------------|--------------
