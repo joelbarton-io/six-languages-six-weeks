@@ -6,4 +6,6 @@ function count(leng, list) {
   return count(leng + 1, list.slice(1));
 }
 
-count(0, [1, 2, 3]);
+const c = count(0, [1, 2, 3]);
+
+console.log('The count of [1, 2, 3] is: ' + c)
