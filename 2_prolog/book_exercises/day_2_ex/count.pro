@@ -12,6 +12,34 @@ count(Length, [H|Tail]) :-
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 | ?- count(Length, [1, 2, 3]).
 line#   call#  operation    expression
