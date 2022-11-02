@@ -1,3 +1,5 @@
+
+
 count(0, []). % base case
 
 count(Length, [H|Tail]) :-
